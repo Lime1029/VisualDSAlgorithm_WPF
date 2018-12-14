@@ -24,5 +24,11 @@ namespace VisualDSAlgorithm_WPF
         {
             InitializeComponent();
         }
+
+        private void Hyperlink_Click1(object sender, RoutedEventArgs e)
+        {
+            StackL stackL = new StackL();
+            stackL.Show();
+        }
     }
 }

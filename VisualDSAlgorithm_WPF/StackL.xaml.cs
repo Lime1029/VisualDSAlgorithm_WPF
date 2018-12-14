@@ -21,7 +21,7 @@ namespace VisualDSAlgorithm_WPF
     public partial class StackL : Window
     {
         string input;
-        //Label movingNumber, label1, label2, label3 = new Label();
+        
 
         public StackL()
         {
@@ -35,23 +35,27 @@ namespace VisualDSAlgorithm_WPF
             input = textInput.Text;
             if (input.Length != 0)
             {
+                movingNumver.Content = input;
+                //创建DispatcherTimer对象
+                System.Windows.Threading.DispatcherTimer tmr = new System.Windows.Threading.DispatcherTimer();
+                //设置间隔时间
+                tmr.Interval = TimeSpan.FromSeconds(0.1);
+                //绑定函数
+                tmr.Tick += new EventHandler(tmr_Tick);
+                tmr.Start();//启动计时器
+                
 
-                /*DoubleAnimation da = new DoubleAnimation();
-                Label movingNumber = new Label();
-                movingNumber.Margin = new Thickness(10, 10, 0, 0);
-                movingNumber.Content = input;
-                background.Children.Add(movingNumber);
-                /*da.From = movingNumber.Margin.Left;
-                da.To = 300;
-                da.Duration = new Duration(TimeSpan.FromSeconds(5));
-                movingNumber.BeginAnimation(Label.MarginProperty, da);
-                DoubleAnimation da = new DoubleAnimation();
-                da.From = label.Margin.Left;
-                da.To = 300;
-                da.Duration = new Duration(TimeSpan.FromSeconds(5));
-                label.BeginAnimation(Label.MarginProperty, da);*/
+            }
+        }
 
-
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+            t1.X = t1.X + 10;
+            t1.Y = t1.Y + 5;
+            if (t1.X > 50)
+            {
+                (sender as System.Windows.Threading.DispatcherTimer).Stop();
             }
         }
     }

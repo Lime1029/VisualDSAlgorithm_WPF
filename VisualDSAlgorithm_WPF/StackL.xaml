@@ -12,7 +12,11 @@
         <Button x:Name="button2" Content="Pop" HorizontalAlignment="Left" Margin="297,27,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button3" Content="Clean Stack" HorizontalAlignment="Left" Margin="400,27,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button4" Content="Skip Back" HorizontalAlignment="Left" Margin="41,385,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="85,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="movingNumver" HorizontalAlignment="Left" Margin="85,135,0,0" VerticalAlignment="Top">
+            <Label.RenderTransform>
+                <TranslateTransform x:Name="t1"></TranslateTransform>
+            </Label.RenderTransform>
+        </Label>
 
     </Grid>
 </Window>

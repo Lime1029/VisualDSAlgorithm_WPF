@@ -6,17 +6,15 @@
         xmlns:local="clr-namespace:VisualDSAlgorithm_WPF"
         mc:Ignorable="d"
         Title="Stack--Linked List Implementation" Height="450" Width="800">
-    <Grid x:Name="background">
-        <TextBox x:Name="textInput"  HorizontalAlignment="Left" Height="23" Margin="41,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button1" Content="Push" Click="Click_Push" HorizontalAlignment="Left" Margin="193,27,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button2" Content="Pop" HorizontalAlignment="Left" Margin="297,27,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button3" Content="Clean Stack" HorizontalAlignment="Left" Margin="400,27,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button4" Content="Skip Back" HorizontalAlignment="Left" Margin="41,385,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="movingNumver" HorizontalAlignment="Left" Margin="85,135,0,0" VerticalAlignment="Top">
-            <Label.RenderTransform>
-                <TranslateTransform x:Name="t1"></TranslateTransform>
-            </Label.RenderTransform>
-        </Label>
+    <Canvas x:Name="canvas">
+        <TextBox x:Name="textInput"  HorizontalAlignment="Left" Height="23" Margin="40,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button1" Content="Push" Click="Click_Push" HorizontalAlignment="Left" Margin="190,25,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button2" Content="Pop" Click="Click_Pop" HorizontalAlignment="Left" Margin="295,25,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button3" Content="Clean Stack" Click="Click_Clear" HorizontalAlignment="Left" Margin="400,25,0,0" VerticalAlignment="Top" Width="75"/>
 
-    </Grid>
+
+        <Label x:Name="label1" Content="Top" Canvas.Left="100" Canvas.Top="130"/>
+        <Label x:Name="label2" Width="20" Height="20" Margin="130, 130, 1, 1" BorderBrush="Black" BorderThickness="1"/>
+
+    </Canvas>
 </Window>

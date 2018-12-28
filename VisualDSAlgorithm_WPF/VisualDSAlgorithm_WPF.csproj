@@ -69,6 +69,9 @@
     <Compile Include="QueueL.xaml.cs">
       <DependentUpon>QueueL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RadixSort.xaml.cs">
+      <DependentUpon>RadixSort.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchN.xaml.cs">
       <DependentUpon>SearchN.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QueueL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadixSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

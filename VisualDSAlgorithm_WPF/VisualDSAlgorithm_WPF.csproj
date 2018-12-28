@@ -58,10 +58,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Arrow.cs" />
-    <Compile Include="DispatcherHelper.cs" />
-    <Compile Include="heap.xaml.cs">
-      <DependentUpon>heap.xaml</DependentUpon>
+    <Compile Include="ComparingSort.xaml.cs">
+      <DependentUpon>ComparingSort.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DancingBlock.cs" />
+    <Compile Include="DispatcherHelper.cs" />
     <Compile Include="MovingBlock.cs" />
     <Compile Include="queueArray.xaml.cs">
       <DependentUpon>queueArray.xaml</DependentUpon>
@@ -81,7 +82,7 @@
     <Compile Include="StackL.xaml.cs">
       <DependentUpon>StackL.xaml</DependentUpon>
     </Compile>
-    <Page Include="heap.xaml">
+    <Page Include="ComparingSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

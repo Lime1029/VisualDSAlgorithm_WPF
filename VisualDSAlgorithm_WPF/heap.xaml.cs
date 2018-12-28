@@ -1,110 +1,28 @@
 ﻿using System;
-
-
-
 using System.Collections.Generic;
-
-
-
 using System.Linq;
-
-
-
 using System.Text;
-
-
-
 using System.Threading.Tasks;
-
-
-
 using System.Windows;
-
-
-
 using System.Windows.Controls;
-
-
-
 using System.Windows.Data;
-
-
-
 using System.Windows.Documents;
-
-
-
 using System.Windows.Input;
-
-
-
 using System.Windows.Media;
-
-
-
 using System.Windows.Media.Imaging;
-
-
-
 using System.Windows.Shapes;
 
-
-
-
-
-
-
 namespace VisualDSAlgorithm_WPF
-
-
-
 {
-
-
-
     /// <summary>
-
-
-
     /// heap.xaml 的交互逻辑
-
-
-
     /// </summary>
-
-
-
-    public partial class heap : Window
-
-
-
+   public partial class heap : Window
     {
-
-
-
-
-
-
-
         public heap()
-
-
-
         {
-
-
-
             InitializeComponent();
-
-
-
         }
-
-
-
-
-
-
 
         //Label label;
 
@@ -1676,220 +1594,54 @@ namespace VisualDSAlgorithm_WPF
 
 
                 double y = row * 100;
-
-
-
                 //左 上 右 下
-
-
-
                 nodeC.Margin = new Thickness(x - 25, y - 25, 0, 0);
-
-
-
                 nodeC.Width = 50;
-
-
-
                 nodeC.Height = 50;
-
-
-
-                //container.Children.Add(nodeC);
-
-
-
                 Ellipse ellipse = new Ellipse();
-
-
-
-                //ellipse.Name = "ellipse" + i.ToString();
-
-
-
                 ellipse.StrokeThickness = 1;
-
-
-
                 ellipse.Stroke = new SolidColorBrush(Colors.Black);
-
-
-
                 ellipse.Width = 50;
-
-
-
                 ellipse.Height = 50;
-
-
-
                 TextBlock node = new TextBlock();
-
-
-
-                //node.Text = addTextBox.Text;
-
-
-
                 node.Text = content.ToString();
-
-
-
                 node.VerticalAlignment = VerticalAlignment.Center;
-
-
-
                 node.HorizontalAlignment = HorizontalAlignment.Center;
-
-
-
                 nodeC.Children.Add(ellipse);
-
-
-
-                //nodeC.RegisterName( "ellipse" + i.ToString(),ellipse);
-
-
-
                 container.RegisterName("ellipse" + i.ToString(), ellipse);
-
-
-
                 container.RegisterName("text" + i.ToString(), node);
-
-
-
                 nodeC.Children.Add(node);
-
-
-
                 container.Children.Add(nodeC);
-
-
-
                 /*
-
-
- 
                  * arrow.Stroke = new SolidColorBrush(Colors.Black);
-
-
- 
                 arrow.HeadWidth = 8;
-
-
- 
                 arrow.HeadHeight = 4;
-
-
- 
                 //arrow.X2 = dataArea.Margin.Left;
-
-
- 
                 //arrow.Y2 = dataArea.Margin.Top + dataHeight / 2;
-
-
- 
                  */
-
-
-
                 if (row != 1)
-
-
-
                 {
-
-
-
                     Arrow arrow = new Arrow();
-
-
-
                     arrow.Stroke = new SolidColorBrush(Colors.Black);
-
-
-
                     arrow.HeadWidth = 8;
-
-
-
                     arrow.HeadHeight = 4;
-
-
-
-
-
-
-
                     int pcolumn = (int)(column + 1) / 2;
-
-
-
                     int prow = row - 1;
-
-
-
                     arrow.X1 = (canvaswidth / (nodenum / 2 + 1)) * pcolumn;
-
-
-
                     arrow.Y1 = prow * 100 + 25;
-
-
-
                     arrow.X2 = x;
-
-
-
                     arrow.Y2 = y - 25;
-
-
-
                     container.Children.Add(arrow);
-
-
-
                 }
-
-
-
                 //添加箭头
-
-
-
                 if (column == nodenum)
-
-
-
                 {
-
-
-
                     row++;
-
-
-
                     column = 1;
-
-
-
                 }
-
-
-
                 else
-
-
-
                 {
-
-
-
                     column++;
-
-
                 }
                 i++;
             }

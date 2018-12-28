@@ -27,8 +27,38 @@ namespace VisualDSAlgorithm_WPF
 
         private void Hyperlink_Click1(object sender, RoutedEventArgs e)
         {
+            stackArray stackarray = new stackArray();
+            stackarray.Show();
+        }
+
+        private void Hyperlink_Click2(object sender, RoutedEventArgs e)
+        {
             StackL stackL = new StackL();
             stackL.Show();
+        }
+
+        private void Hyperlink_Click3(object sender, RoutedEventArgs e)
+        {
+            queueArray queuearray = new queueArray();
+            queuearray.Show();
+        }
+
+        private void Hyperlink_Click4(object sender, RoutedEventArgs e)
+        {
+            QueueL queueL = new QueueL();
+            queueL.Show();
+        }
+
+        private void Hyperlink_Click5(object sender, RoutedEventArgs e)
+        {
+            SearchN searchN = new SearchN();
+            searchN.Show();
+        }
+
+        private void Hyperlink_Click6(object sender, RoutedEventArgs e)
+        {
+            ComparingSort comparingSort = new ComparingSort();
+            comparingSort.Show();
         }
     }
 }

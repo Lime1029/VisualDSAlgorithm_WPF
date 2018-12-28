@@ -109,8 +109,8 @@
         </WrapPanel>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="59,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="21"><Run Text="Searching sorted "/><Run Text="array"/></TextBlock>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="139,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
-        <Button x:Name="button" Content="liner sort" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="binary sort" HorizontalAlignment="Left" Margin="389,62,0,0" VerticalAlignment="Top" Width="74" Click="button1_Click"/>
+        <Button x:Name="button" Content="liner search" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top" Width="80" Click="button_Click"/>
+        <Button x:Name="button1" Content="binary search" HorizontalAlignment="Left" Margin="389,62,0,0" VerticalAlignment="Top" Width="80" Click="button1_Click"/>
         <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Margin="407,135,0,0" TextWrapping="Wrap" Text="searing for" VerticalAlignment="Top" Height="27" Width="69"/>
         <Label x:Name="Slabel" Content="   " HorizontalAlignment="Left" Margin="498,130,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2"/>
         <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Margin="612,135,0,0" TextWrapping="Wrap" Text="result" VerticalAlignment="Top"/>

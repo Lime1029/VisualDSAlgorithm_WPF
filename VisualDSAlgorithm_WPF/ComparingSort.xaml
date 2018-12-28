@@ -1,0 +1,18 @@
+﻿<Window x:Class="VisualDSAlgorithm_WPF.ComparingSort"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualDSAlgorithm_WPF"
+        mc:Ignorable="d"
+        Title="Comparing Sort" Height="450" Width="800">
+    <Canvas x:Name="background">
+        <Button x:Name="button" Content="Insertion Sort" Canvas.Left="50" Canvas.Top="10" Width="100" Click="Button_Click_Insertion_Sort"/>
+        <Button x:Name="button1" Content="Selection Sort" Canvas.Left="160" Canvas.Top="10" Width="100" Click="Button1_Click_Selection_Sort"/>
+        <Button x:Name="button2" Content="Bubble Sort" Canvas.Left="270" Canvas.Top="10" Width="100" Click="Button2_Click_Bubble_Sort"/>
+        <Button x:Name="button3" Content="Quick Sort" Canvas.Left="380" Canvas.Top=" 10" Width="100" Click="Button3_Click_Quick_Sort"/>
+        <Button x:Name="button4" Content="Merge Sort" Canvas.Left="490" Canvas.Top=" 10" Width="100" Click="Button4_Click_Merge_Sort"/>
+        <Button x:Name="button5" Content="Shell Sort" Canvas.Left="600" Canvas.Top=" 10" Width="100" Click="Button5_Click_Shell_Sort"/>
+        <Label x:Name="comparison" Canvas.Left="568"  Canvas.Top="50"/>
+    </Canvas>
+</Window>

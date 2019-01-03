@@ -23,6 +23,10 @@ namespace VisualDSAlgorithm_WPF
         public MainWindow()
         {
             InitializeComponent();
+            ImageBrush b = new ImageBrush();
+            b.ImageSource = new BitmapImage(new Uri("C:/Users/李博/Documents/Visual Studio 2017/Projects/VisualDSAlgorithm_WPF/VisualDSAlgorithm_WPF/background.png"));
+            b.Stretch = Stretch.Fill;
+            this.Background = b;
         }
 
         private void Hyperlink_Click1(object sender, RoutedEventArgs e)
@@ -59,6 +63,18 @@ namespace VisualDSAlgorithm_WPF
         {
             ComparingSort comparingSort = new ComparingSort();
             comparingSort.Show();
+        }
+
+        private void Hyperlink_Click7(object sender, RoutedEventArgs e)
+        {
+            heap h = new heap();
+            h.Show();
+        }
+
+        private void Hyperlink_Click8(object sender, RoutedEventArgs e)
+        {
+            RadixSort radixSort = new RadixSort();
+            radixSort.Show();
         }
     }
 }

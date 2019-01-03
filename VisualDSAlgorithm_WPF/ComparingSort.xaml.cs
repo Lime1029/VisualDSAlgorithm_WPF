@@ -22,6 +22,9 @@ namespace VisualDSAlgorithm_WPF
         const int NUMOFBLOCKS = 10;
         const int INTERVAL = 30;
         const double DOWN = 150;
+        private Brush originColor = Brushes.SkyBlue;
+        private Brush movingColor = Brushes.Pink;
+
         DancingBlock[] blocks = new DancingBlock[NUMOFBLOCKS];
         DancingBlock tempBlock = new DancingBlock();
 
@@ -80,7 +83,7 @@ namespace VisualDSAlgorithm_WPF
                 tempBlock = blocks[i];
                 tempBlock.trec.Y += DOWN;
                 tempBlock.tlabel.Y += DOWN;
-                tempBlock.rectangle.Fill = Brushes.Orange;
+                tempBlock.rectangle.Fill = movingColor;
 
                 j = i - 1;
                 while (j >= 0 && array[j] > guard)
@@ -102,7 +105,7 @@ namespace VisualDSAlgorithm_WPF
                 tempBlock.tlabel.X -= (i - j - 1) * INTERVAL;
                 tempBlock.trec.Y -= DOWN;
                 tempBlock.tlabel.Y -= DOWN;
-                tempBlock.rectangle.Fill = Brushes.Purple;
+                tempBlock.rectangle.Fill = originColor;
 
                 blocks[j + 1] = tempBlock;
                 Wait(500);
@@ -135,8 +138,8 @@ namespace VisualDSAlgorithm_WPF
                 tempBlock = blocks[i];
                 tempBlock.tlabel.Y += DOWN;
                 tempBlock.trec.Y += DOWN;
-                tempBlock.rectangle.Fill = Brushes.Orange;
-                blocks[minIndex].rectangle.Fill = Brushes.Orange;
+                tempBlock.rectangle.Fill = movingColor;
+                blocks[minIndex].rectangle.Fill = movingColor;
                 Wait(500);
 
                 blocks[minIndex].trec.X += (i - minIndex) * INTERVAL;
@@ -147,8 +150,8 @@ namespace VisualDSAlgorithm_WPF
                 tempBlock.tlabel.X += (minIndex - i) * INTERVAL;
                 tempBlock.tlabel.Y -= DOWN;
                 tempBlock.trec.Y -= DOWN;
-                tempBlock.rectangle.Fill = Brushes.Purple;
-                blocks[minIndex].rectangle.Fill = Brushes.Purple;
+                tempBlock.rectangle.Fill = originColor;
+                blocks[minIndex].rectangle.Fill = originColor;
 
                 blocks[i] = blocks[minIndex];
                 blocks[minIndex] = tempBlock;
@@ -177,7 +180,7 @@ namespace VisualDSAlgorithm_WPF
                         tempBlock = blocks[j];
                         tempBlock.tlabel.Y += DOWN;
                         tempBlock.trec.Y += DOWN;
-                        tempBlock.rectangle.Fill = Brushes.Orange;
+                        tempBlock.rectangle.Fill = movingColor;
                         Wait(500);
 
                         blocks[j + 1].trec.X -= INTERVAL;
@@ -188,7 +191,7 @@ namespace VisualDSAlgorithm_WPF
                         tempBlock.tlabel.X += INTERVAL;
                         tempBlock.tlabel.Y -= DOWN;
                         tempBlock.trec.Y -= DOWN;
-                        tempBlock.rectangle.Fill = Brushes.Purple;
+                        tempBlock.rectangle.Fill = originColor;
 
                         blocks[j] = blocks[j + 1];
                         blocks[j + 1] = tempBlock;
@@ -223,7 +226,7 @@ namespace VisualDSAlgorithm_WPF
             tempBlock = blocks[low];
             tempBlock.tlabel.Y += DOWN;
             tempBlock.trec.Y += DOWN;
-            tempBlock.rectangle.Fill = Brushes.Orange;
+            tempBlock.rectangle.Fill = movingColor;
             int tempBlockIndex = low;
             while (low < high)
             {
@@ -233,12 +236,12 @@ namespace VisualDSAlgorithm_WPF
                 }
                 arr[low] = arr[high];
 
-                blocks[high].rectangle.Fill = Brushes.Orange;
+                blocks[high].rectangle.Fill = movingColor;
                 Wait(500);
 
                 blocks[high].trec.X -= (high - low) * INTERVAL;
                 blocks[high].tlabel.X -= (high - low) * INTERVAL;
-                blocks[high].rectangle.Fill = Brushes.Purple;
+                blocks[high].rectangle.Fill = originColor;
                 Wait(500);
 
                 blocks[low] = blocks[high];
@@ -250,12 +253,12 @@ namespace VisualDSAlgorithm_WPF
                 }
                 arr[high] = arr[low];
 
-                blocks[low].rectangle.Fill = Brushes.Orange;
+                blocks[low].rectangle.Fill = movingColor;
                 Wait(500);
 
                 blocks[low].trec.X += (high - low) * INTERVAL;
                 blocks[low].tlabel.X += (high - low) * INTERVAL;
-                blocks[low].rectangle.Fill = Brushes.Purple;
+                blocks[low].rectangle.Fill = originColor;
                 Wait(500);
 
                 blocks[high] = blocks[low];
@@ -266,7 +269,7 @@ namespace VisualDSAlgorithm_WPF
             tempBlock.tlabel.X += (low - tempBlockIndex) * INTERVAL;
             tempBlock.tlabel.Y -= DOWN;
             tempBlock.trec.Y -= DOWN;
-            tempBlock.rectangle.Fill = Brushes.Purple;
+            tempBlock.rectangle.Fill = originColor;
             blocks[high] = tempBlock;
             return low;
         }
@@ -296,8 +299,8 @@ namespace VisualDSAlgorithm_WPF
                 if (arr[left] <= arr[right])
                 {
 
-                    blocks[left].rectangle.Fill = Brushes.Orange;
-                    blocks[right].rectangle.Fill = Brushes.Orange;
+                    blocks[left].rectangle.Fill = movingColor;
+                    blocks[right].rectangle.Fill = movingColor;
                     Wait(500);
                     mergeArr[mergeArrayIndex++] = arr[left];
 
@@ -305,16 +308,16 @@ namespace VisualDSAlgorithm_WPF
                     mergeBlocks[mergeBlockIndex].lnumber.Margin = new Thickness(80 + (INTERVAL * mergeBlockIndex), 200 + DOWN, 0, 0);
                     mergeBlocks[mergeBlockIndex].rectangle.Margin = new Thickness(80 + (INTERVAL * mergeBlockIndex), 200 + DOWN - mergeBlocks[mergeBlockIndex].rectangle.Height, 0, 0);
                    
-                    blocks[left].rectangle.Fill = Brushes.Purple;
-                    blocks[right].rectangle.Fill = Brushes.Purple;
+                    blocks[left].rectangle.Fill = originColor;
+                    blocks[right].rectangle.Fill = originColor;
                     left++;mergeBlockIndex++;
                     
                 }
                 else
                 {
 
-                    blocks[left].rectangle.Fill = Brushes.Orange;
-                    blocks[right].rectangle.Fill = Brushes.Orange;
+                    blocks[left].rectangle.Fill = movingColor;
+                    blocks[right].rectangle.Fill = movingColor;
                     Wait(500);
                     mergeArr[mergeArrayIndex++] = arr[right];
 
@@ -322,8 +325,8 @@ namespace VisualDSAlgorithm_WPF
                     mergeBlocks[mergeBlockIndex].lnumber.Margin = new Thickness(80 + (INTERVAL * mergeBlockIndex), 200 + DOWN, 0, 0);
                     mergeBlocks[mergeBlockIndex].rectangle.Margin = new Thickness(80 + (INTERVAL * mergeBlockIndex), 200 + DOWN - mergeBlocks[mergeBlockIndex].rectangle.Height, 0, 0);
                     
-                    blocks[left].rectangle.Fill = Brushes.Purple;
-                    blocks[right].rectangle.Fill = Brushes.Purple;
+                    blocks[left].rectangle.Fill = originColor;
+                    blocks[right].rectangle.Fill = originColor;
                     right++;mergeBlockIndex++;
                     
                 }
@@ -398,24 +401,24 @@ namespace VisualDSAlgorithm_WPF
                                 tempBlock = blocks[j];
                                 tempBlock.tlabel.Y += DOWN;
                                 tempBlock.trec.Y += DOWN;
-                                tempBlock.rectangle.Fill = Brushes.Orange;
+                                tempBlock.rectangle.Fill = movingColor;
 
                                 blocks[i].tlabel.Y += DOWN;
                                 blocks[i].trec.Y += DOWN;
-                                blocks[i].rectangle.Fill = Brushes.Orange;
+                                blocks[i].rectangle.Fill = movingColor;
                                 Wait(500);
 
                                 blocks[i].trec.X -= (i - j) * INTERVAL;
                                 blocks[i].tlabel.X -= (i - j) * INTERVAL;
                                 blocks[i].tlabel.Y -= DOWN;
                                 blocks[i].trec.Y -= DOWN;
-                                blocks[i].rectangle.Fill = Brushes.Purple;
+                                blocks[i].rectangle.Fill = originColor;
                                 
                                 tempBlock.tlabel.X += (i - j) * INTERVAL;
                                 tempBlock.trec.X += (i - j) * INTERVAL;
                                 tempBlock.tlabel.Y -= DOWN;
                                 tempBlock.trec.Y -= DOWN;
-                                tempBlock.rectangle.Fill = Brushes.Purple;
+                                tempBlock.rectangle.Fill = originColor;
                                 
                                 blocks[j] = blocks[i];
                                 blocks[i] = tempBlock;

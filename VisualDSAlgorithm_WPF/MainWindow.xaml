@@ -6,33 +6,38 @@
         xmlns:local="clr-namespace:VisualDSAlgorithm_WPF"
         mc:Ignorable="d"
         Title="VisualDSAlgorithm" Height="700" Width="1000">
-    <Grid>
-        <Label x:Name="label" Content="DS Algorithm Visualization" Margin="100,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Showcard Gothic" HorizontalAlignment="Center"/>
+    <Grid HorizontalAlignment="Left" Margin="0,0,-0.4,0.4" Width="994">
+        <Label x:Name="label" Content="DS Algorithm Visualization" Margin="125,50,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Showcard Gothic"/>
         <Label x:Name="label1"  HorizontalAlignment="Left" Margin="125,120,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click1" FontSize="20">1. Stack: Array Implementation</Hyperlink>
         </Label>
-        <Label x:Name="label2"  HorizontalAlignment="Left" Margin="125,170,0,0" VerticalAlignment="Top">
+        <Label x:Name="label2"  HorizontalAlignment="Left" Margin="125,160,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click2" FontSize="20">2. Stack: Linked List Implementation</Hyperlink>
         </Label>
-        <Label x:Name="label3"  HorizontalAlignment="Left" Margin="125,220,0,0" VerticalAlignment="Top">
+        <Label x:Name="label3"  HorizontalAlignment="Left" Margin="125,200,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click3" FontSize="20">3. Queue: Array Implementation</Hyperlink>
         </Label>
-        <Label x:Name="label4"  HorizontalAlignment="Left" Margin="125,270,0,0" VerticalAlignment="Top">
+        <Label x:Name="label4"  HorizontalAlignment="Left" Margin="125,240,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click4" FontSize="20">4. Queue: Linked List Implementation</Hyperlink>
         </Label>
-        <Label x:Name="label5"  HorizontalAlignment="Left" Margin="125,320,0,0" VerticalAlignment="Top">
+        <Label x:Name="label5"  HorizontalAlignment="Left" Margin="125,280,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click5" FontSize="20">5. Binary and Linear Search(of sorted list)</Hyperlink>
         </Label>
-        <Label x:Name="label6"  HorizontalAlignment="Left" Margin="125,370,0,0" VerticalAlignment="Top">
+        <Label x:Name="label6"  HorizontalAlignment="Left" Margin="125,320,0,0" VerticalAlignment="Top">
             <Hyperlink Hyperlink.Click="Hyperlink_Click6" FontSize="20">6. Comparison Sort</Hyperlink>
         </Label>
-        <Label x:Name="label6_1" Content="1) Insertion Sort" HorizontalAlignment="Left" Margin="140,400,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="label6_2" Content="2) Selection Sort" HorizontalAlignment="Left" Margin="140,420,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="label6_3" Content="3) Bubble Sort" HorizontalAlignment="Left" Margin="140,440,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="label6_4" Content="4) Quick Sort" HorizontalAlignment="Left" Margin="140,460,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="label6_5" Content="5) Merge Sort" HorizontalAlignment="Left" Margin="140,480,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="label6_6" Content="6) Shell Sort" HorizontalAlignment="Left" Margin="140,500,0,0" VerticalAlignment="Top" FontSize="15"/>
-        
+        <Label x:Name="label6_1" Content="1) Insertion Sort" HorizontalAlignment="Left" Margin="140,345,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label6_2" Content="2) Selection Sort" HorizontalAlignment="Left" Margin="280,345,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label6_3" Content="3) Bubble Sort" HorizontalAlignment="Left" Margin="420,345,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label6_4" Content="4) Quick Sort" HorizontalAlignment="Left" Margin="140,370,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label6_5" Content="5) Merge Sort" HorizontalAlignment="Left" Margin="280,370,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label6_6" Content="6) Shell Sort" HorizontalAlignment="Left" Margin="420,370,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="label7"  HorizontalAlignment="Left" Margin="125,390,0,0" VerticalAlignment="Top">
+            <Hyperlink Hyperlink.Click="Hyperlink_Click7" FontSize="20">7. Heap Sort</Hyperlink>
+        </Label>
+        <Label x:Name="label8"  HorizontalAlignment="Left" Margin="125,430,0,0" VerticalAlignment="Top">
+            <Hyperlink Hyperlink.Click="Hyperlink_Click8" FontSize="20">8. Radix Sort</Hyperlink>
+        </Label>
 
     </Grid>
 </Window>

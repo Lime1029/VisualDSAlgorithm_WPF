@@ -52,7 +52,7 @@ namespace VisualDSAlgorithm_WPF
             //recWidth = 10;
 
             //rectangle.Stroke = Brushes.Black;
-            rectangle.Fill = Brushes.Purple;
+            rectangle.Fill = Brushes.SkyBlue;
             rectangle.Height = number * heightUnit;
             rectangle.Width = 20;
             rectangle.RenderTransform = trec;

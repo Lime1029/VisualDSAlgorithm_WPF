@@ -24,7 +24,8 @@ namespace VisualDSAlgorithm_WPF
         const int MAXBLOCKS = 6;
         MovingBlock[] blocks = new MovingBlock[MAXBLOCKS];
 
-        Label label4 = new Label();
+        Label label4 = new Label();//显示Enqueue/Dequeue数
+        Label label5 = new Label();//显示输入超过6个数警告
 
         Arrow tailArrow = new Arrow();
 
@@ -34,6 +35,9 @@ namespace VisualDSAlgorithm_WPF
 
             label4.Margin = new Thickness(40, 55, 0, 0);
             canvas.Children.Add(label4);
+
+            label5.Margin = new Thickness(40, 70, 0, 0);
+            canvas.Children.Add(label5);
 
             tailArrow.X1 = label3.Margin.Left + (label3.Width / 2);
             tailArrow.Y1 = label3.Margin.Top + (label3.Height / 2);
@@ -49,12 +53,28 @@ namespace VisualDSAlgorithm_WPF
             if (input.Length != 0)
             {
                 numOfBlocks += 1;
+
+                if (numOfBlocks > 6)
+                {
+                    label5.Content = "你输入超过了6个数！";
+                    label5.FontSize = 20;
+                    label5.Foreground = new SolidColorBrush(Colors.Red);
+                    label5.FontWeight = FontWeights.Bold;
+                    label5.Margin = new Thickness(200, 200, 0, 0);
+                    numOfBlocks--;
+                    return;
+                }
+                label5.Content = "(enqueue不超过6个数)";
+
                 blocks[numOfBlocks - 1] = new MovingBlock();
                 
                 label4.Content = "Enqueuing Value: ";
 
                 textInput.Clear();
                 textInput.IsEnabled = false;
+                button1.IsEnabled = false;
+                button2.IsEnabled = false;
+                button.IsEnabled = false;
 
                 blocks[numOfBlocks - 1].movingNumber.Content = input;
                 blocks[numOfBlocks - 1].movingNumber.Margin = new Thickness(160, 55, 0, 0);
@@ -131,6 +151,9 @@ namespace VisualDSAlgorithm_WPF
                 {
                     (sender as System.Windows.Threading.DispatcherTimer).Stop();
                     textInput.IsEnabled = true;
+                    button1.IsEnabled = true;
+                    button2.IsEnabled = true;
+                    button.IsEnabled = true;
                     //label4.Content = "";
                 }
                
@@ -148,11 +171,18 @@ namespace VisualDSAlgorithm_WPF
         private void Click_Dequeue(object sender, RoutedEventArgs e)
         {
             label4.Content = "Dequeuing Value: ";
+            label5.Content = "";
 
             System.Windows.Threading.DispatcherTimer tmr2 = new System.Windows.Threading.DispatcherTimer();
             tmr2.Interval = TimeSpan.FromSeconds(0.01);
             tmr2.Tick += new EventHandler(Tmr2_Tick);
             tmr2.Start();
+
+            textInput.Clear();
+            textInput.IsEnabled = false;
+            button1.IsEnabled = false;
+            button2.IsEnabled = false;
+            button.IsEnabled = false;
 
             /*canvas.Children.Remove(blocks[0].dataArea);
             canvas.Children.Remove(blocks[0].pointerArea);
@@ -209,6 +239,11 @@ namespace VisualDSAlgorithm_WPF
                 }
                 
                 (sender as System.Windows.Threading.DispatcherTimer).Stop();
+
+                textInput.IsEnabled = true;
+                button1.IsEnabled = true;
+                button2.IsEnabled = true;
+                button.IsEnabled = true;
             }
 
 
@@ -225,6 +260,8 @@ namespace VisualDSAlgorithm_WPF
                 blocks[i] = null;
             }
             label4.Content = "";
+            label5.Content = "";
+            textInput.Clear();
             tailArrow.Stroke = new SolidColorBrush();
         }
     }

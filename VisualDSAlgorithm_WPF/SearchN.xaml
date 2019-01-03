@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisualDSAlgorithm_WPF"
         mc:Ignorable="d"
-        Title="SearchN" Height="800" Width="1300">
+        Title="Search" Height="700" Width="1300">
     <Grid>
         <WrapPanel HorizontalAlignment="Left" Height="100" Margin="46,303,0,0" VerticalAlignment="Top" Width="706">
             <StackPanel>
@@ -107,10 +107,9 @@
                 </Grid>
             </StackPanel>
         </WrapPanel>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="59,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="21"><Run Text="Searching sorted "/><Run Text="array"/></TextBlock>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="139,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
-        <Button x:Name="button" Content="liner search" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top" Width="80" Click="button_Click"/>
-        <Button x:Name="button1" Content="binary search" HorizontalAlignment="Left" Margin="389,62,0,0" VerticalAlignment="Top" Width="80" Click="button1_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="139,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
+        <Button x:Name="button" Content="liner search" HorizontalAlignment="Left" Margin="289,46,0,0" VerticalAlignment="Top" Width="80" Click="button_Click"/>
+        <Button x:Name="button1" Content="binary search" HorizontalAlignment="Left" Margin="389,46,0,0" VerticalAlignment="Top" Width="80" Click="button1_Click"/>
         <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Margin="407,135,0,0" TextWrapping="Wrap" Text="searing for" VerticalAlignment="Top" Height="27" Width="69"/>
         <Label x:Name="Slabel" Content="   " HorizontalAlignment="Left" Margin="498,130,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2"/>
         <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Margin="612,135,0,0" TextWrapping="Wrap" Text="result" VerticalAlignment="Top"/>
@@ -230,8 +229,8 @@
             <Label x:Name="Ilabel" Content="   " HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2"/>
         </WrapPanel>
 
-        <Button x:Name="stopButton" Content="stop" HorizontalAlignment="Left" Margin="498,62,0,0" VerticalAlignment="Top" Width="75" Click="stopButton_Click"/>
-        <StackPanel Name="binarySort" HorizontalAlignment="Left" Height="304" Margin="891,124,0,0" VerticalAlignment="Top" Width="269" Visibility="Hidden">
+        <Button x:Name="stopButton" Content="stop" HorizontalAlignment="Left" Margin="498,46,0,0" VerticalAlignment="Top" Width="75" Click="stopButton_Click"/>
+        <StackPanel Name="binarySort" HorizontalAlignment="Left" Height="304" Margin="903,124,0,0" VerticalAlignment="Top" Width="269" Visibility="Hidden" >
             <Label x:Name="codelabel11" Content="def binarySearch(listData,value)"/>
             <Label x:Name="codelabel12" Content="     low=0"/>
             <Label x:Name="codelabel13" Content="     high=len(listData)-1"/>
@@ -253,7 +252,7 @@
             <TextBlock x:Name="textBlock33" TextWrapping="Wrap" Text="         high       " VerticalAlignment="Center"/>
             <Label x:Name="highlabel" Content="" Width="30" BorderBrush="Orange" BorderThickness="1"/>
         </WrapPanel>
-        <Label x:Name="label" Content="want to find" HorizontalAlignment="Left" Margin="59,60,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="want to find" HorizontalAlignment="Left" Margin="59,44,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelspeed" Content="speed" HorizontalAlignment="Left" Margin="59,107,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="speedBox" HorizontalAlignment="Left" Height="23" Margin="139,111,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="107"/>
 

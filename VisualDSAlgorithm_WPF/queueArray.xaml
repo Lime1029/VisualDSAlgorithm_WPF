@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisualDSAlgorithm_WPF"
         mc:Ignorable="d"
-        Title="stackArray" Height="800" Width="1300">
+        Title="Queue--Array Implementation" Height="450" Width="800">
     <Canvas Margin="0,0,2,-12" Name="body">
-        <TextBox x:Name="inputBox" HorizontalAlignment="Left" Height="23" Margin="22,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="enqueueBbutton" Content="enqueue" HorizontalAlignment="Left" Margin="96,33,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="button_Click"/>
-        <Button x:Name="dequeueButton" Content="dequeue" HorizontalAlignment="Left" Margin="202,33,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="button1_Click"/>
-        <Label x:Name="titleLabel" Content="Queue(ArrayImplementation)" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="clearButton" Content="clearQueue" HorizontalAlignment="Left" Margin="305,33,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="button2_Click"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="97" Canvas.Top="215"/>
-        <Label x:Name="label0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="98" Canvas.Top="225">
+        <TextBox x:Name="inputBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" TextChanged="textBox_TextChanged" Canvas.Left="29" Canvas.Top="27"/>
+        <Button x:Name="enqueueBbutton" Content="enqueue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="23" Click="button_Click" Canvas.Left="199" Canvas.Top="27"/>
+        <Button x:Name="dequeueButton" Content="dequeue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="23" Click="button1_Click" Canvas.Left="305" Canvas.Top="27"/>
+        <Button x:Name="clearButton" Content="clearQueue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="23" Click="button2_Click" Canvas.Left="408" Canvas.Top="27"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="80" Canvas.Top="232"/>
+        <Label x:Name="label0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="81" Canvas.Top="242">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,19 +22,19 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="41" Canvas.Left="137" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-0.328,-0.594" Canvas.Left="178" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="218" Canvas.Top="215"/>
-        <Label x:Name="label2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="178" Canvas.Top="226"/>
-        <Label x:Name="label1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="137" Canvas.Top="226"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="258" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="298" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="338" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="38" Canvas.Left="378" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="416" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="456" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="494" Canvas.Top="215"/>
-        <Label x:Name="label10" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="498" Canvas.Top="227">
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="41" Canvas.Left="120" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-0.328,-0.594" Canvas.Left="161" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="201" Canvas.Top="232"/>
+        <Label x:Name="label2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="161" Canvas.Top="242"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="120" Canvas.Top="242"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="241" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="281" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="321" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="38" Canvas.Left="361" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="399" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="439" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="477" Canvas.Top="232"/>
+        <Label x:Name="label10" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="481" Canvas.Top="244">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -45,70 +44,70 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="41" Canvas.Left="534" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-0.328,-0.594" Canvas.Left="575" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="615" Canvas.Top="215"/>
-        <Label x:Name="label12" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="580" Canvas.Top="226"/>
-        <Label x:Name="label11" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="539" Canvas.Top="226"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="655" Canvas.Top="215"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="695" Canvas.Top="215"/>
-        <Label x:Name="label3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="218" Canvas.Top="226"/>
-        <Label x:Name="l0" Content="0" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.275,0.605" Canvas.Left="113" Canvas.Top="255"/>
-        <Label x:Name="l1" Content="1" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.275,0.433" Canvas.Left="153" Canvas.Top="255"/>
-        <Label x:Name="l2" Content="2" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="193" Canvas.Top="255"/>
-        <Label x:Name="l3" Content="3" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="227" Canvas.Top="256"/>
-        <Label x:Name="l4" Content="4" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="273" Canvas.Top="255"/>
-        <Label x:Name="l5" Content="5" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="313" Canvas.Top="255"/>
-        <Label x:Name="l6" Content="6" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="353" Canvas.Top="255"/>
-        <Label x:Name="l7" Content="7" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="391" Canvas.Top="255"/>
-        <Label x:Name="l8" Content="8" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="433" Canvas.Top="255"/>
-        <Label x:Name="l9" Content="9" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="473" Canvas.Top="255"/>
-        <Label x:Name="l10" Content="10" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="503" Canvas.Top="255"/>
-        <Label x:Name="l11" Content="11" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.275,0.433" Canvas.Left="550" Canvas.Top="255"/>
-        <Label x:Name="l12" Content="12" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.171,0.533" Canvas.Left="583" Canvas.Top="255"/>
-        <Label x:Name="l13" Content="13" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="624" Canvas.Top="255"/>
-        <Label x:Name="l14" Content="14" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="663" Canvas.Top="255"/>
-        <Label x:Name="l15" Content="15" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.135,0.576" Canvas.Left="703" Canvas.Top="255"/>
-        <Label x:Name="label4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="258" Canvas.Top="225"/>
-        <Label x:Name="label5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="298" Canvas.Top="225"/>
-        <Label x:Name="label6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="338" Canvas.Top="225"/>
-        <Label x:Name="label7" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="378" Canvas.Top="225"/>
-        <Label x:Name="label8" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="416" Canvas.Top="226"/>
-        <Label x:Name="label9" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="456" Canvas.Top="225"/>
-        <Label x:Name="label13" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="620" Canvas.Top="226"/>
-        <Label x:Name="label14" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="670" Canvas.Top="226"/>
-        <Label x:Name="label15" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="703" Canvas.Top="226"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="41" Canvas.Left="517" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-0.328,-0.594" Canvas.Left="558" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="598" Canvas.Top="232"/>
+        <Label x:Name="label12" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="563" Canvas.Top="242"/>
+        <Label x:Name="label11" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="522" Canvas.Top="242"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="638" Canvas.Top="232"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40" Canvas.Left="678" Canvas.Top="232"/>
+        <Label x:Name="label3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="201" Canvas.Top="242"/>
+        <Label x:Name="l0" Content="0" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.275,0.605" Canvas.Left="96" Canvas.Top="272"/>
+        <Label x:Name="l1" Content="1" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.275,0.433" Canvas.Left="136" Canvas.Top="272"/>
+        <Label x:Name="l2" Content="2" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="176" Canvas.Top="272"/>
+        <Label x:Name="l3" Content="3" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="210" Canvas.Top="272"/>
+        <Label x:Name="l4" Content="4" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="256" Canvas.Top="272"/>
+        <Label x:Name="l5" Content="5" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="296" Canvas.Top="272"/>
+        <Label x:Name="l6" Content="6" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="336" Canvas.Top="272"/>
+        <Label x:Name="l7" Content="7" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="374" Canvas.Top="272"/>
+        <Label x:Name="l8" Content="8" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="416" Canvas.Top="272"/>
+        <Label x:Name="l9" Content="9" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="456" Canvas.Top="272"/>
+        <Label x:Name="l10" Content="10" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="486" Canvas.Top="272"/>
+        <Label x:Name="l11" Content="11" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.275,0.433" Canvas.Left="533" Canvas.Top="272"/>
+        <Label x:Name="l12" Content="12" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.171,0.533" Canvas.Left="566" Canvas.Top="272"/>
+        <Label x:Name="l13" Content="13" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="607" Canvas.Top="272"/>
+        <Label x:Name="l14" Content="14" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="646" Canvas.Top="272"/>
+        <Label x:Name="l15" Content="15" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.135,0.576" Canvas.Left="686" Canvas.Top="272"/>
+        <Label x:Name="label4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="241" Canvas.Top="242"/>
+        <Label x:Name="label5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="242"/>
+        <Label x:Name="label6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="321" Canvas.Top="242"/>
+        <Label x:Name="label7" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="361" Canvas.Top="242"/>
+        <Label x:Name="label8" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="399" Canvas.Top="242"/>
+        <Label x:Name="label9" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="439" Canvas.Top="242"/>
+        <Label x:Name="label13" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="603" Canvas.Top="242"/>
+        <Label x:Name="label14" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="653" Canvas.Top="242"/>
+        <Label x:Name="label15" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="686" Canvas.Top="242"/>
         <Label x:Name="errorLabel" Content="l" Foreground="Red" HorizontalAlignment="Left" Margin="96,448,0,0" VerticalAlignment="Top" Width="399"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Canvas.Left="184" Canvas.Top="102"/>
-        <Ellipse Name="headEllipse"  Height="50" Canvas.Left="184" Stroke="Blue" Canvas.Top="102" Width="50" Opacity="0.0" RenderTransformOrigin="0.449,0.485"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Canvas.Left="166" Canvas.Top="112"/>
+        <Ellipse StrokeThickness="3" Name="headEllipse"  Height="50" Canvas.Left="166" Stroke="Blue" Canvas.Top="112" Width="50" Opacity="0.0" RenderTransformOrigin="0.449,0.485"/>
 
-        <Label x:Name="headLabel" Content="" Canvas.Left="188" Canvas.Top="114"/>
-        <Label x:Name="label" Content="head index" Canvas.Left="96" Canvas.Top="114" Width="92"/>
+        <Label x:Name="headLabel" Content="" Canvas.Left="170" Canvas.Top="124"/>
+        <Label x:Name="label" Content="head index" Canvas.Left="78" Canvas.Top="124" Width="92"/>
 
-        <Label x:Name="label20" Content="tail index" Canvas.Left="338" Canvas.Top="114" Width="78"/>
-        <Rectangle  Height="50" Canvas.Left="408" Stroke="Black" Canvas.Top="102" Width="51"/>
-        <Ellipse  Name="tailellipse" Height="50" Canvas.Left="408" Stroke="Red" Canvas.Top="102" Width="50" Opacity="0.0"/>
-        <Label x:Name="tailLabel" Content="" Canvas.Left="413" Canvas.Top="114"/>
-        <Ellipse x:Name="ellipse0"  Height="41" Canvas.Left="97" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.51">
+        <Label x:Name="label20" Content="tail index" Canvas.Left="320" Canvas.Top="124" Width="78"/>
+        <Rectangle  Height="50" Canvas.Left="390" Stroke="Black" Canvas.Top="112" Width="51"/>
+        <Ellipse StrokeThickness="3"  Name="tailellipse" Height="50" Canvas.Left="390" Stroke="Red" Canvas.Top="112" Width="50" Opacity="0.0"/>
+        <Label x:Name="tailLabel" Content="" Canvas.Left="395" Canvas.Top="124"/>
+        <Ellipse x:Name="ellipse0"  Height="42" Canvas.Left="80" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.51">
             <Ellipse.Stroke>
                 <SolidColorBrush Color="#FF0025CC"/>
             </Ellipse.Stroke>
         </Ellipse>
-        <Ellipse x:Name="ellipse1" Height="41" Canvas.Left="138" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.282,0.616"/>
-        <Ellipse x:Name="ellipse2" Height="41" Canvas.Left="178" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse3" Height="41" Canvas.Left="218" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse4" Height="41" Canvas.Left="258" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse5" Height="41" Canvas.Left="298" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse7"  Height="41" Canvas.Left="378" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse8" Height="41" Canvas.Left="416" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse9" Height="41" Canvas.Left="456" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse10" Height="41" Canvas.Left="496" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse11" Height="41" Canvas.Left="533" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse12"  Height="41" Canvas.Left="575" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse13" Height="41" Canvas.Left="617" Stroke="Blue" Canvas.Top="251" Width="41" Opacity="0.0" RenderTransformOrigin="0.511,0.51"/>
-        <Ellipse x:Name="ellipse14" Height="41" Canvas.Left="655" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse15" Height="41" Canvas.Left="696" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
-        <Ellipse x:Name="ellipse6" Height="41" Canvas.Left="337" Stroke="Blue" Canvas.Top="250" Width="41" Opacity="0.0" RenderTransformOrigin="0.451,0.51"/>
+        <Ellipse x:Name="ellipse1" Height="40" Canvas.Left="121" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.282,0.616"/>
+        <Ellipse x:Name="ellipse2" Height="40" Canvas.Left="161" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse3" Height="42" Canvas.Left="201" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse4" Height="42" Canvas.Left="241" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse5" Height="40" Canvas.Left="281" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse7"  Height="42" Canvas.Left="361" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse8" Height="42" Canvas.Left="399" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse9" Height="40" Canvas.Left="439" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse10" Height="40" Canvas.Left="479" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse11" Height="40" Canvas.Left="516" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse12"  Height="40" Canvas.Left="558" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse13" Height="40" Canvas.Left="600" Stroke="Blue" Canvas.Top="268" Width="41" Opacity="0.0" RenderTransformOrigin="0.511,0.51"/>
+        <Ellipse x:Name="ellipse14" Height="42" Canvas.Left="638" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse15" Height="42" Canvas.Left="679" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.484,0.563"/>
+        <Ellipse x:Name="ellipse6" Height="42" Canvas.Left="320" Stroke="Blue" Canvas.Top="266" Width="41" Opacity="0.0" RenderTransformOrigin="0.451,0.51"/>
 
     </Canvas>
 </Window>

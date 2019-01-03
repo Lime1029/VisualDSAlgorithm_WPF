@@ -905,7 +905,7 @@ namespace VisualDSAlgorithm_WPF
 
 
 
-            infolabel.Content = list[0].ToString() + list[1].ToString() + list[2].ToString() + list[3].ToString() + list[4].ToString() + list[5].ToString() + list[6].ToString();
+            //infolabel.Content = list[0].ToString() + list[1].ToString() + list[2].ToString() + list[3].ToString() + list[4].ToString() + list[5].ToString() + list[6].ToString();
 
 
 

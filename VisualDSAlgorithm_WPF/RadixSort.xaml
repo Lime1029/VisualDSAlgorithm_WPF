@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="RadixSort" Height="700" Width="1300">
     <Grid>
-        <StackPanel Name="contentStack" HorizontalAlignment="Left" Height="40" Margin="29,48,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal"/>
-        <Button x:Name="sortButton" Content="Radix Sort" HorizontalAlignment="Left" Margin="129,10,0,0" VerticalAlignment="Top" Width="75" Click="sortButton_Click"/>
-        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="241,10,0,0" VerticalAlignment="Top" Width="75" Click="addButton_Click"/>
-        <Button x:Name="autoButton" Content="auto" HorizontalAlignment="Left" Margin="340,10,0,0" VerticalAlignment="Top" Width="75" Click="autoButton_Click"/>
-        <TextBox x:Name="addTextBox" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="94"/>
-        <StackPanel Name="midStack" HorizontalAlignment="Left" Height="80" Margin="29,187,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal">
+        <StackPanel Name="contentStack" HorizontalAlignment="Left" Height="40" Margin="41,98,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal"/>
+        <Button x:Name="sortButton" Content="Radix Sort" HorizontalAlignment="Left" Margin="160,26,0,0" VerticalAlignment="Top" Width="75" Click="sortButton_Click"/>
+        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="272,26,0,0" VerticalAlignment="Top" Width="75" Click="addButton_Click"/>
+        <Button x:Name="autoButton" Content="auto" HorizontalAlignment="Left" Margin="371,26,0,0" VerticalAlignment="Top" Width="75" Click="autoButton_Click"/>
+        <TextBox x:Name="addTextBox" HorizontalAlignment="Left" Height="22" Margin="41,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94"/>
+        <StackPanel Name="midStack" HorizontalAlignment="Left" Height="80" Margin="41,299,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal">
             <StackPanel>
                 <Label Name="index0"  Width="40" Height="40" BorderBrush="Black" BorderThickness="1"></Label>
                 <Grid>
@@ -84,11 +84,11 @@
                 </Grid>
             </StackPanel>
         </StackPanel>
-        <Label x:Name="infolabel" Content="Label" HorizontalAlignment="Left" Margin="29,107,0,0" VerticalAlignment="Top"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="27" Margin="145,105,0,0" VerticalAlignment="Top" Width="89">
+        <Label x:Name="infolabel" Content="Label" HorizontalAlignment="Left" Margin="42,194,0,0" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="26" Margin="158,192,0,0" VerticalAlignment="Top" Width="90">
             <Label x:Name="label" Content="digit"/>
             <Label x:Name="digitlabel" Content=""/>
         </StackPanel>
-        <StackPanel x:Name="tempStack" HorizontalAlignment="Left" Height="40" Margin="29,302,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal"/>
+        <StackPanel x:Name="tempStack" HorizontalAlignment="Left" Height="40" Margin="41,456,0,0" VerticalAlignment="Top" Width="1046" Orientation="Horizontal"/>
     </Grid>
 </Window>
